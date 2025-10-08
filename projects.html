@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Projects — Dimitrije Pavlovic</title>
+<meta name="description" content="Networking, cybersecurity, and homelab projects." />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<header class="site-header">
+<div class="container nav">
+<a class="brand" href="./">Dimitrije's Portfolio</a>
+<nav id="site-nav" class="nav-links">
+<a href="./" data-nav="home">Home</a>
+<a href="projects.html" data-nav="projects">Projects</a>
+<a href="https://github.com/pvlvc-dev" target="_blank" rel="noopener">GitHub</a>
+<a href="mailto:you@example.com">Contact</a>
+</nav>
+<button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</button>
+</div>
+</header>
+
+
+<main>
+<section class="section">
+<div class="container">
+<h1>Projects</h1>
+<p class="muted">A selection of homelab, networking, and security builds. Each card links to docs or a repo.</p>
+
+
+<!-- PROJECTS GRID -->
+<div class="grid-3 cards">
+
+
+<!-- Reusable Card Pattern -->
+<!--
+Copy this block and swap the title/desc/links for new projects.
+Optional: add a <ul class="list"> of bullets inside .card-body.
+-->
+<article class="card card-hover">
+<div class="card-header">Homelab Core</div>
+<div class="card-body">
+<h3>pfSense + Cisco + UniFi + Proxmox</h3>
+<p>Enterprise-style segmented network with OpenVPN, VLAN trunking, UniFi AP, and services (AdGuard, Seafile).</p>
+<div class="chips">
+<span class="chip">pfSense</span>
+<span class="chip">Cisco</span>
+<span class="chip">Proxmox</span>
+</div>
+</div>
+<div class="card-actions">
+<a class="btn small" href="assets/doc/homelab-core.html">Docs</a>
+<a class="btn small ghost" href="#" target="_blank" rel="noopener">Repo</a>
+<a class="card-footbox">Last updated: 10/2025</a>
+</div>
+</article>
+
+
+<article class="card card-hover">
+<div class="card-header">Monitoring</div>
+<div class="card-body">
+<h3>Wazuh + Grafana Stack</h3>
+<p>Centralized log collection from pfSense, Proxmox, and UniFi controller with visual dashboards and alerts.</p>
+<div class="chips">
+<span class="chip">Wazuh</span>
+<span class="chip">Grafana</span>
+<span class="chip">Syslog</span>
+</div>
+</div>
+<div class="card-footer">
+<Span>Coming soon...</Span>
+</div>
+</article>
+
+
+<article class="card card-hover">
+<div class="card-header">Automation</div>
+<div class="card-body">
+<h3>Ansible Homelab</h3>
+<p>Playbooks to provision Proxmox VMs/LXCs and apply pfSense rules, enabling reproducible deployments.</p>
+<div class="chips">
+<span class="chip">Ansible</span>
+<span class="chip">IaC</span>
+<span class="chip">Proxmox API</span>
+</div>
+</div>
+<div class="card-footer">
+<span>Coming soon...</span>
+</div>
+</article>
+
+
+</div>
+</div>
+</section>
+</main>
+
+
+<footer class="site-footer">
+<div class="container footer-inner">
+<div>© <span id="year"></span> Dimitrije Pavlovic</div>
+<div class="footer-links">
+<a href="./">Home</a>
+<a href="projects.html">Projects</a>
+<a href="dimitrijepavlovic1035@gmail.com">Contact</a>
+</div>
+</div>
+</footer>
+
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

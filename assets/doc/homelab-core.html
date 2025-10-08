@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Homelab Core Documentation</title>
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- Code highlighting -->
+  <link rel="stylesheet" href="https://unpkg.com/prismjs@1/themes/prism-tomorrow.min.css" />
+</head>
+
+<body class="bg-coal-900 text-stone-200">
+  <main class="container py-16">
+
+<header class="page-header">
+  <h1 class="page-title">Homelab Core Infrastructure</h1>
+  <p class="page-version">Version 1.0 | Oct 2025</p>
+  <a href="../../projects.html" class="btn nav">← Back to Projects</a>
+</header>
+
+    <div class="container grid-2">
+    <section class="card mb-10">
+      <div class="card-header">Overview</div>
+      <div class="card-body">
+        <p>This page documents the full Homelab Core setup, goals, topology, and lessons learned from 
+            building an enterprise-style lab using pfSense, Cisco, UniFi, and Proxmox.</p>
+      </div>
+    </section>
+    <section>
+        <div class="img-frame">
+             <img src="../img/homelab_rack.jpg" alt="rack photo">
+        </div>
+    </section>
+    </div>
+
+    <div class="container grid-2">
+    <section class="card mb-10">
+        <div class="card-header">Topology</div>
+        <div class="card-body">
+            <p>The network features a pfSense mini PC router/firewall,  
+                which goes downstream to a Cisco switch for layer 2 connections, and wireless connectivity
+                is handled by the UniFi access point. The switch and router are configured with VLANs, to which the 
+                switch has trunk ports to both the router & AP. 
+            </p>
+            <p>
+                The home modem is connected to the pfSense router via a LAN port, and isn't set to bridge since the 
+                homelab will not be turned on 24/7, ensuring that WiFi users can still connect to the home modem.
+                Another mini PC has Proxmox installed which runs under the Server VLAN, allowing me to spin up LXC
+                or VMs to run services within my network.
+            </p>
+        </div>
+        </section>
+        <section>
+        <div class="img-frame">
+             <img src="../img/logical.png" alt="logical diagram photo">
+        </div>
+    </section>
+    </div>
+
+    <section class="card mb-10">
+      <div class="card-header">Configuration</div>
+      <div class="card-body">
+        <pre><code class="language-bash"># Trunk link example
+int g0/0
+switchport mode trunk
+switchport trunk allowed vlan 10, 20, 30, 40, 50, 99
+</code></pre>
+
+        <pre><code class="language-ini"># Firewall rule example
+pass in quick on igb0.10 proto tcp from 10.80.10.0/24 to any port = 443 keep state</code></pre>
+      </div>
+    </section>
+
+<div class="container grid-2">
+<section class="card mb-10">
+      <div class="card-header">Services</div>
+      <div class="card-body">
+        <ul class="list-disc pl-6 space-y-2">
+          <li><strong>UniFi Controller (LXC)</strong> — Wireless management.</li>
+          <li><strong>AdGuard Home (LXC)</strong> — DNS filtering.</li>
+          <li><strong>Seafile (VM)</strong> — File storage and sync.</li>
+        </ul>
+        <p>
+            These are my current services on my Proxmox host, I intend to expand in the future 
+            once I upgrade the hardware as the current bottleneck is RAM and Storage. I decided to run 
+            Seafile on a VM as opposed to a LXC as VMs offer a more 'gapped' state from the host rather
+            than a LXC, and I would want that kind of security especially with cloud file sharing such as Seafile.
+        </p>
+      </div>
+    </section>
+       <section class="card mb-10">
+      <div class="card-header">Security & Monitoring</div>
+      <div class="card-body">
+        <p>Future expansion includes centralized log management using Wazuh, 
+          metrics visualization with Grafana, and flow analytics via ntopng.</p>
+        <div class="img-placeholder mt-6">placeholder</div>
+      </div>
+    </section>
+</div>
+
+
+    <section class="card mb-10">
+      <div class="card-header">Lessons Learned</div>
+      <div class="card-body">
+        <ul class="list-disc pl-6 space-y-2">
+          <li>Proper VLAN tagging prevents isolation issues.</li>
+          <li>pfSense rule order directly affects connectivity.</li>
+          <li>LXC containers reduce resource overhead vs. VMs.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card mb-10">
+      <div class="card-header">Gallery</div>
+      <div class="card-body grid md:grid-cols-2 gap-4">
+        <div class="img-placeholder">placeholder</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/prismjs@1/components/prism-core.min.js"></script>
+  <script src="https://unpkg.com/prismjs@1/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>© <span id="year"></span> Dimitrije Pavlovic</div>
+    <div class="footer-links">
+      <a href="../../index.html">Home</a>
+      <a href="../../projects.html">Projects</a>
+      <a href="mailto:dimitrijepavlovic1035@gmail.com">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+
+</html>
