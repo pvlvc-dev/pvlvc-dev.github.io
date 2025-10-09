@@ -68,10 +68,10 @@ section {
 }
 
 /* Layout */
-.container { width: min(1100px, 92%); margin: 0 auto; }
+.container { width: min(1100px, 92%); margin: 0 auto;}
 .section { padding: 64px 0; }
 .grid-2 { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: center; padding-top: 20px;}
-.grid-3 { display: grid; grid-template-columns: 1fr; gap: 24px; }
+.grid-3 { display: grid; grid-template-columns: 1fr; gap: 24px; padding-top: 10px;}
 @media (min-width: 820px) {
 .grid-2 { grid-template-columns: 1fr 1fr; }
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
@@ -134,8 +134,6 @@ section {
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(79,70,229,0.5);
 }
-
-
 
 /* Badges & Chips */
 .badges { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0; }
