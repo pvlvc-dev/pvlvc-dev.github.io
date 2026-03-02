@@ -39,15 +39,15 @@
         <div class="card-header">Topology</div>
         <div class="card-body">
             <p>The network features a pfSense mini PC router/firewall,  
-                which goes downstream to a Cisco switch for layer 2 connections, and wireless connectivity
-                is handled by the UniFi access point. The switch and router are configured with VLANs, to which the 
-                switch has trunk ports to both the router & AP. 
+                which goes downstream to a Cisco switch for layer 2 connections, with wireless connectivity
+                handled by a UniFi AP. The switch and router are configured with VLANs, the switch having trunk links
+                to the router & AP. 
             </p>
             <p>
-                The home modem is connected to the pfSense router via a LAN port, and isn't set to bridge since the 
-                homelab will not be turned on 24/7, ensuring that WiFi users can still connect to the home modem.
-                Another mini PC has Proxmox installed which runs under the Server VLAN, allowing me to spin up LXC
-                or VMs to run services within my network.
+                The home modem is connected to the pfSense router, and isn't set to bridge since the 
+                homelab will not be turned on 24/7, ensuring that WiFi users can still connect to the home modem even
+                when the homelab is off or down for experimentation. Another mini PC has Proxmox installed which runs 
+                under the Server VLAN, allowing me to spin up LXC or VMs to run services within my network.
             </p>
         </div>
         </section>
@@ -62,13 +62,14 @@
       <div class="card-header">Configuration</div>
       <div class="card-body">
         <pre><code class="language-bash"># Trunk link example
-int g0/0
-switchport mode trunk
-switchport trunk allowed vlan 10, 20, 30, 40, 50, 99
-</code></pre>
+        int g0/0
+        switchport mode trunk
+        switchport trunk allowed vlan 10, 20, 30, 40, 50, 99
+        </code></pre>
 
         <pre><code class="language-ini"># Firewall rule example
-pass in quick on igb0.10 proto tcp from 10.80.10.0/24 to any port = 443 keep state</code></pre>
+        pass in quick on igb0.10 proto tcp from 10.80.10.0/24 to any port = 443 keep state
+        </code></pre>
       </div>
     </section>
 
@@ -80,6 +81,7 @@ pass in quick on igb0.10 proto tcp from 10.80.10.0/24 to any port = 443 keep sta
           <li><strong>UniFi Controller (LXC)</strong> — Wireless management.</li>
           <li><strong>AdGuard Home (LXC)</strong> — DNS filtering.</li>
           <li><strong>Seafile (VM)</strong> — File storage and sync.</li>
+          <li><strong>Fedora (VM)</strong> — Learning & experimentation.</li>
         </ul>
         <p>
             These are my current services on my Proxmox host, I intend to expand in the future 
