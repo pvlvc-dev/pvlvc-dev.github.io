@@ -27,7 +27,7 @@
 <section class="section">
 <div class="container">
 <h1 class="page-header">Projects</h1>
-<p class="muted">A selection of homelab, networking, and security builds. Each card links to brief documentation or a repository.</p>
+<p class="muted">A selection of homelab, networking, and security builds. Each card links to brief documentation within a repository.</p>
 
 <div class="grid-3 cards">
 
@@ -40,22 +40,25 @@
 <span class="chip">pfSense</span>
 <span class="chip">Cisco</span>
 <span class="chip">Proxmox</span>
+<span class="chip">UniFi</span>
 </div>
+
 </div>
 <div class="card-actions">
-<a class="btn small" href="assets/doc/homelab-core.html">Docs</a>
-<a class="card-footbox">Last updated: 10/2025</a>
+<a class="btn small" href="https://github.com/pvlvc-dev/homelab-infrastructure/blob/main/README.md">Repo</a>
+<a class="card-footbox">Last updated: 2/2026</a>
 </div>
 </article>
 
 <article class="card card-hover">
-<div class="card-header">Monitoring</div>
+<div class="card-header">Automation</div>
 <div class="card-body">
-<h3>Async port scanner</h3>
-<p>TCP connect port scanner using asyncio.</p>
+<h3>Cisco config provisioner</h3>
+<p>A program that intakes a csv file and returns copy pasteable CLI configurations for Cisco devices, aimed at 
+    automating manual CLI input and minimizing human error.</p>
 <div class="chips">
-<span class="chip">Python 3</span>
-<span class="chip">Async</span>
+<span class="chip">Python</span>
+<span class="chip">Jinja2</span>
 </div>
 </div>
 <div class="card-footer">
@@ -67,7 +70,7 @@
 <div class="card-header">Local LLM</div>
 <div class="card-body">
 <h3>AI integration</h3>
-<p>An custom compute node with a 10G fiber backbone designed to offload
+<p>A custom compute node with a 10G fiber backbone designed to offload
     heavy tasks. It will handle local AI inference and double as a high-bitrate
 video ingest station for media editing.</p>
 <div class="chips">

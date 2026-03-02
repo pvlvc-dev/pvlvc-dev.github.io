@@ -160,5 +160,5 @@ section {
 .cta { display: flex; gap: 12px; flex-wrap: wrap; }
 
 
-/* Mobile menu (revealed when toggled) */
+/* Mobile menu */
 #site-nav.open { display: flex; flex-direction: column; gap: 12px; position: absolute; right: 4%; left: 4%; top: 62px; padding: 16px; background: #0f121a; border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--shadow); }
