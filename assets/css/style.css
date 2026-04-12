@@ -394,7 +394,7 @@ body::after {
   font-size: 15px;
   line-height: 1.75;
   max-width: 520px;
-  margin-bottom: 44px;
+  margin-bottom: 0px;
 }
 
 /*About*/
@@ -593,7 +593,7 @@ body::after {
 
 /*Projects page hero*/
 .page-hero {
-  padding: 72px 0 52px;
+  padding: 72px 0 24px;
   border-bottom: 1px solid var(--border);
   margin-bottom: 52px;
 }
