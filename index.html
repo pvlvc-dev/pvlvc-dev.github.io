@@ -3,106 +3,171 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Dimitrije Pavlovic — Homelab & Projects</title>
-<meta name="description" content="Portfolio: homelab, networking, cybersecurity, and systems projects." />
+<title>Dimitrije Pavlovic — Homelab & Networking</title>
+<meta name="description" content="Homelab, networking, and cybersecurity portfolio." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+
+<div id="scroll-progress"></div>
+
 <header class="site-header">
-<div class="container nav">
-<a class="brand" href="./">Dimitrije's Portfolio</a>
-<nav id="site-nav" class="nav-links">
-<a href="./" data-nav="home">Home</a>
-<a href="projects.html" data-nav="projects">Projects</a>
-<a href="https://github.com/pvlvc-dev" target="_blank" rel="noopener">GitHub</a>
-<a href="mailto:dimitrijepavlovic1035@gmail.com">Contact</a>
-</nav>
-<button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</button>
-</div>
+  <div class="container nav">
+    <a class="brand" href="./">Dimitrije Pavlovic/portfolio<span class="brand-accent">_</span></a>
+    <nav id="site-nav" class="nav-links">
+      <a href="./" data-nav="home">Home</a>
+      <a href="projects.html" data-nav="projects">Projects</a>
+      <a href="https://github.com/pvlvc-dev" target="_blank" rel="noopener" class="nav-cta">GitHub ↗</a>
+      <a href="mailto:dimitrije.pav@proton.me">Contact</a>
+    </nav>
+    <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</button>
+  </div>
 </header>
 
-
 <main>
-<section class="hero">
-<div class="container hero-inner">
-<div class="hero-text">
-<h1>Homelabber & Networking enthusiast</h1>
-<p>
-I've designed and currently run a homelab emulating enterprise level implementation using pfSense,
-Cisco switching, UniFi wireless, and Proxmox-hosting, with services like AdGuard and Seafile. I'm focused on
-security implementation, automation and resilient network design. Currently, I am expanding my skill sets by 
-tackling on automation, services, and mastering core networking concepts.
-</p>
-<div class="cta">
-<a class="btn primary" href="projects.html">View Projects</a>
-</div>
-</div>
-<div class="hero-card">
-<div class="card card-hover">
-<div class="card-header">Current Goals</div>
-<div class="card-body">
-    <ul class="list">
-    <li>Implementing central monitoring tools</li>
-    <li>Adding additional Proxmox services</li>
-    <li>Achieving my CCNA certification</li>
-    </ul>
-</div>
-</div>
-</div>
-</div>
-</section>
 
-<section id="about" class="section">
-<div class="container grid-2">
-<div>
-<h2>About Me</h2>
-<p>
-I'm Dimitrije, a 3rd year Networking & Cybersecurity student that's keen on problem solving and finding resourceful
-solutions to networking problems. I'm currently expanding my skill sets by jumping into practical projects
-that draw in key focuses from both networking and security, all while providing genuine services to my every day life.
-My current focus is to refine my protocol knowledge and continue expanding upon my homelab project.
-</p>
-<div class="badges">
-<span class="badge">pfSense</span>
-<span class="badge">Cisco</span>
-<span class="badge">UniFi</span>
-<span class="badge">Proxmox</span>
-<span class="badge">AdGuard</span>
-<span class="badge">Python</span>
-<span class="badge">OpenVPN</span>
-</div>
-<div class="cta">
-<a class="btn primary" href="projects.html">See my builds</a>
-<a class="btn" href="https://www.linkedin.com/in/dimitrije-pavlovic/" target="_blank" rel="noopener">LinkedIn</a>
-</div>
-</div>
-<div>
-<div class="card card-hover">
-<div class="card-header">Highlights</div>
-<div class="card-body">
-    <ul class="list">
-    <li>Granular firewall rules & VLAN segmentation</li>
-    <li>OpenVPN remote access across isolated networks</li>
-    <li>LXC-based controller & services on Proxmox</li>
-    </ul>
-</div>
-</div>
-</div>
-</div>
-</section>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+
+      <div class="hero-text">
+        <div class="hero-eyebrow reveal">Networking & Homelab</div>
+        <h1 class="reveal reveal-d1">Homelabber &<br><em>Network Engineer</em></h1>
+        <p class="hero-desc reveal reveal-d2">
+          I design and operate an enterprise-style homelab built on pfSense, Cisco switching,
+          UniFi wireless, and Proxmox, with a focus on security architecture, network segmentation,
+          and self-hosted services.
+        </p>
+        <div class="hero-stats reveal reveal-d3">
+          <div class="hero-stat">
+            <span class="hero-stat-value">3</span>
+            <span class="hero-stat-label">Years Studying</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-value">3</span>
+            <span class="hero-stat-label">Ongoing Projects</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-value">6+</span>
+            <span class="hero-stat-label">Self-hosted Services</span>
+          </div>
+        </div>
+        <div class="cta reveal reveal-d4">
+          <a class="btn primary" href="projects.html">View Projects</a>
+          <a class="btn ghost" href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+
+      <!-- Terminal status card -->
+      <div class="terminal-card reveal reveal-d2">
+        <div class="terminal-titlebar">
+          <span class="t-dot r"></span>
+          <span class="t-dot y"></span>
+          <span class="t-dot g"></span>
+          <span class="terminal-filename">status.sh — bash</span>
+        </div>
+        <div class="terminal-body">
+          <div class="t-section-label">Network Status</div>
+
+          <div class="status-row">
+            <span class="status-label"><span class="s-dot live"></span>pfSense FW</span>
+            <span class="s-badge live">ACTIVE</span>
+          </div>
+          <div class="status-row">
+            <span class="status-label"><span class="s-dot live"></span>Proxmox VE</span>
+            <span class="s-badge live">ACTIVE</span>
+          </div>
+          <div class="status-row">
+            <span class="status-label"><span class="s-dot live"></span>AdGuard DNS</span>
+            <span class="s-badge live">ACTIVE</span>
+          </div>
+          <div class="status-row">
+            <span class="status-label"><span class="s-dot live"></span>OpenVPN</span>
+            <span class="s-badge live">ACTIVE</span>
+          </div>
+          <div class="status-row">
+            <span class="status-label"><span class="s-dot live"></span>UniFi AP</span>
+            <span class="s-badge live">ACTIVE</span>
+          </div>
+          <div class="status-row">
+            <span class="status-label"><span class="s-dot planned"></span>CCNA</span>
+            <span class="s-badge planned">IN PROGRESS</span>
+          </div>
+
+          <hr class="t-divider">
+
+          <div class="t-section-label">Environment</div>
+          <div class="t-kv-row">
+            <span class="t-key">SERVICES_RUNNING</span>
+            <span class="t-val">6+</span>
+          </div>
+          <div class="t-kv-row">
+            <span class="t-key">CORE_SWITCH</span>
+            <span class="t-val">C-2960G</span>
+          </div>
+          <div class="t-kv-row">
+            <span class="t-key">HYPERVISOR</span>
+            <span class="t-val">Proxmox VE<span class="terminal-cursor"></span></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container grid-2">
+
+      <div class="about-text reveal">
+        <div class="section-label">About</div>
+        <h2 class="section-title">Problem solver.<br>Network tinkerer.</h2>
+        <p>
+          I'm a 3rd-year Networking & Cybersecurity student with a hands-on focus — every concept
+          I study gets applied in my homelab before I consider it learned. I care about building systems
+          that are both functional and well-documented.
+        </p>
+        <p>
+          My current focus is on expanding monitoring coverage, automating repetitive configuration work,
+          and working towards my CCNA.
+        </p>
+        <div class="cta" style="margin-top:28px;">
+          <a class="btn primary" href="projects.html">See my builds</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/dimitrije-pavlovic/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+      </div>
+
+      <div class="reveal reveal-d2">
+        <div class="section-label" style="margin-bottom:16px;">Tech Stack</div>
+        <div class="skill-grid">
+          <div class="skill-item"><div class="skill-icon">🔒</div><span class="skill-name">pfSense</span></div>
+          <div class="skill-item"><div class="skill-icon">🔀</div><span class="skill-name">Cisco IOS</span></div>
+          <div class="skill-item"><div class="skill-icon">📡</div><span class="skill-name">UniFi</span></div>
+          <div class="skill-item"><div class="skill-icon">🖥️</div><span class="skill-name">Proxmox VE</span></div>
+          <div class="skill-item"><div class="skill-icon">🛡️</div><span class="skill-name">AdGuard</span></div>
+          <div class="skill-item"><div class="skill-icon">🐍</div><span class="skill-name">Python</span></div>
+          <div class="skill-item"><div class="skill-icon">🔐</div><span class="skill-name">OpenVPN</span></div>
+          <div class="skill-item"><div class="skill-icon">🐧</div><span class="skill-name">Linux</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
 </main>
 
 <footer class="site-footer">
-<div class="container footer-inner">
-<div>© <span id="year"></span> Dimitrije Pavlovic</div>
-<div class="footer-links">
-<a href="./">Home</a>
-<a href="projects.html">Projects</a>
-<a href="mailto:dimitrijepavlovic1035@gmail.com">Contact</a>
-</div>
-</div>
+  <div class="container footer-inner">
+    <span class="footer-copy">© <span id="year"></span> Dimitrije Pavlovic</span>
+    <div class="footer-links">
+      <a href="./">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="mailto:dimitrije.pav@proton.me">Contact</a>
+    </div>
+  </div>
 </footer>
 
 <script src="assets/js/main.js"></script>

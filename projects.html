@@ -5,102 +5,119 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Projects — Dimitrije Pavlovic</title>
 <meta name="description" content="Networking, cybersecurity, and homelab projects." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+
+<div id="scroll-progress"></div>
+
 <header class="site-header">
-<div class="container nav">
-<a class="brand" href="./">Dimitrije's Portfolio</a>
-<nav id="site-nav" class="nav-links">
-<a href="./" data-nav="home">Home</a>
-<a href="projects.html" data-nav="projects">Projects</a>
-<a href="https://github.com/pvlvc-dev" target="_blank" rel="noopener">GitHub</a>
-<a href="mailto:you@example.com">Contact</a>
-</nav>
-<button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</button>
-</div>
+  <div class="container nav">
+    <a class="brand" href="./">Dimitrije Pavlovic/portfolio<span class="brand-accent">_</span></a>
+    <nav id="site-nav" class="nav-links">
+      <a href="./" data-nav="home">Home</a>
+      <a href="projects.html" data-nav="projects">Projects</a>
+      <a href="https://github.com/pvlvc-dev" target="_blank" rel="noopener" class="nav-cta">GitHub ↗</a>
+      <a href="mailto:dimitrije.pav@proton.me">Contact</a>
+    </nav>
+    <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</button>
+  </div>
 </header>
 
 <main>
-<section class="section">
-<div class="container">
-<h1 class="page-header">Projects</h1>
-<p class="muted">A selection of homelab, networking, and security builds. Each card links to brief documentation within a repository.</p>
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-label reveal">Projects</div>
+      <h1 class="section-title reveal reveal-d1">What I've Built</h1>
+      <p class="section-sub reveal reveal-d2">
+        Homelab, networking, and automation projects — each one documented in its own repository.
+      </p>
+    </div>
+  </section>
 
-<div class="grid-3 cards">
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="cards-grid">
 
-<article class="card card-hover">
-<div class="card-header">Homelab Core</div>
-<div class="card-body">
-<h3>pfSense + Cisco + UniFi + Proxmox</h3>
-<p>Enterprise-style segmented network with OpenVPN, VLAN trunking, UniFi AP, and services (AdGuard, Seafile).</p>
-<div class="chips">
-<span class="chip">pfSense</span>
-<span class="chip">Cisco</span>
-<span class="chip">Proxmox</span>
-<span class="chip">UniFi</span>
-</div>
-</div>
+        <article class="card reveal">
+          <div class="card-header">
+            <span class="card-header-label">Homelab Core</span>
+            <span class="card-status active">● Active</span>
+          </div>
+          <div class="card-body">
+            <h3>pfSense + Cisco + UniFi + Proxmox</h3>
+            <p>Enterprise-style segmented network with OpenVPN remote access, VLAN trunking, UniFi AP management, and self-hosted services including AdGuard and Seafile.</p>
+            <div class="chips">
+              <span class="chip">pfSense</span>
+              <span class="chip">Cisco IOS</span>
+              <span class="chip">Proxmox VE</span>
+              <span class="chip">UniFi</span>
+              <span class="chip">OpenVPN</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a class="btn small" href="https://github.com/pvlvc-dev/homelab-infrastructure/blob/main/README.md" target="_blank" rel="noopener">Repo ↗</a>
+            <span class="card-date">Updated 02 Mar 2026</span>
+          </div>
+        </article>
 
-<div class="card-actions">
-<a class="btn small" href="https://github.com/pvlvc-dev/homelab-infrastructure/blob/main/README.md">Repo</a>
-<a class="card-footbox">Last updated: 2/3/2026</a>
-</div>
-</article>
+        <article class="card reveal reveal-d1">
+          <div class="card-header">
+            <span class="card-header-label">Automation</span>
+            <span class="card-status active">● Active</span>
+          </div>
+          <div class="card-body">
+            <h3>Cisco Config Provisioner</h3>
+            <p>Ingests a CSV of device parameters and outputs copy-pasteable Cisco IOS CLI configurations, eliminating manual input errors and cutting provisioning time significantly.</p>
+            <div class="chips">
+              <span class="chip">Python</span>
+              <span class="chip">Jinja2</span>
+              <span class="chip">CSV</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a class="btn small" href="https://github.com/pvlvc-dev/Cisco-Network-Provisioner" target="_blank" rel="noopener">Repo ↗</a>
+            <span class="card-date">Updated 03 Mar 2026</span>
+          </div>
+        </article>
 
-<article class="card card-hover">
-<div class="card-header">Automation</div>
-<div class="card-body">
-<h3>Cisco config provisioner</h3>
-<p>A program that intakes a csv file and returns copy pasteable CLI configurations for Cisco devices, aimed at 
-    automating manual CLI input and minimizing human error.</p>
-<div class="chips">
-<span class="chip">Python</span>
-<span class="chip">Jinja2</span>
-</div>
-</div>
+        <article class="card reveal reveal-d2">
+          <div class="card-header">
+            <span class="card-header-label">Compute Node</span>
+            <span class="card-status planned">◌ Planned</span>
+          </div>
+          <div class="card-body">
+            <h3>Local LLM + Media Ingest Station</h3>
+            <p>A dedicated compute node connected via 10G fibre backbone, designed to handle local AI inference with Ollama and serve as a high-bitrate video ingest station for media editing workflows.</p>
+            <div class="chips">
+              <span class="chip">Ollama</span>
+              <span class="chip">10G Fibre</span>
+              <span class="chip">Local LLM</span>
+            </div>
+          </div>
+          <div class="card-actions" style="justify-content:flex-end;">
+            <span class="card-date">In design</span>
+          </div>
+        </article>
 
-<div class="card-actions">
-<a class="btn small" href="https://github.com/pvlvc-dev/Cisco-Network-Provisioner">Repo</a>
-<a class="card-footbox">Last updated: 3/3/2026</a>
-</div>
-</article>
-
-<article class="card card-hover">
-<div class="card-header">Local LLM</div>
-<div class="card-body">
-<h3>AI integration</h3>
-<p>A custom compute node with a 10G fiber backbone designed to offload
-    heavy tasks. It will handle local AI inference and double as a high-bitrate
-video ingest station for media editing.</p>
-<div class="chips">
-<span class="chip">Ollama</span>
-<span class="chip">Local LLM</span>
-<span class="chip">10G Fiber</span>
-</div>
-</div>
-<div class="card-footer">
-<span>Coming soon...</span>
-</div>
-</article>
-</div>
-</div>
-</section>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="site-footer">
-<div class="container footer-inner">
-<div>© <span id="year"></span> Dimitrije Pavlovic</div>
-<div class="footer-links">
-<a href="./">Home</a>
-<a href="projects.html">Projects</a>
-<a href="dimitrijepavlovic1035@gmail.com">Contact</a>
-</div>
-</div>
+  <div class="container footer-inner">
+    <span class="footer-copy">© <span id="year"></span> Dimitrije Pavlovic</span>
+    <div class="footer-links">
+      <a href="./">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="mailto:dimitrije.pav@proton.me">Contact</a>
+    </div>
+  </div>
 </footer>
-
 
 <script src="assets/js/main.js"></script>
 </body>
