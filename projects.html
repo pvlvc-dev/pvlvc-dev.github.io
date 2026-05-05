@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Projects — Dimitrije Pavlovic</title>
+<title>Projects | Dimitrije Pavlovic</title>
 <meta name="description" content="Networking, cybersecurity, and homelab projects." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,9 +31,9 @@
   <section class="page-hero">
     <div class="container">
       <div class="section-label reveal">Projects</div>
-      <h1 class="section-title reveal reveal-d1">What I've Built</h1>
+      <h1 class="section-title reveal reveal-d1">Current builds.</h1>
       <p class="section-sub reveal reveal-d2">
-        Homelab, networking, and automation projects. Each documented in its own repository.
+        Networking, homelab, and automation. Each has its own repo.
       </p>
     </div>
   </section>
@@ -49,7 +49,7 @@
           </div>
           <div class="card-body">
             <h3>pfSense + Cisco + UniFi + Proxmox</h3>
-            <p>Enterprise-style segmented network with OpenVPN remote access, VLAN trunking, UniFi AP management, and self-hosted services including AdGuard and Seafile.</p>
+            <p>Segmented across 6 VLANs: pfSense at the edge, Cisco C-2960G for switching, UniFi U7 Lite for wireless, Proxmox for virtualisation. AdGuard and Seafile in LXC containers, OpenVPN for remote access.</p>
             <div class="chips">
               <span class="chip">pfSense</span>
               <span class="chip">Cisco IOS</span>
@@ -71,7 +71,7 @@
           </div>
           <div class="card-body">
             <h3>Cisco Config Provisioner</h3>
-            <p>Ingests a CSV of device parameters and outputs copy-pasteable Cisco IOS CLI configurations, eliminating manual input errors and cutting provisioning time significantly.</p>
+            <p>Takes a CSV of device parameters and renders Cisco IOS configs through Jinja2 templates. Cuts out manual copying when provisioning multiple switches.</p>
             <div class="chips">
               <span class="chip">Python</span>
               <span class="chip">Jinja2</span>
@@ -91,7 +91,7 @@
           </div>
           <div class="card-body">
             <h3>Local LLM + Media Ingest Station</h3>
-            <p>A dedicated compute node connected via 10G fibre backbone, designed to handle local AI inference with Ollama and serve as a high-bitrate video ingest station for media editing workflows.</p>
+            <p>Dedicated compute node on a 10G fibre uplink. Planned for local AI inference with Ollama and high-bitrate video ingest. Keeps both workloads off the main LAN.</p>
             <div class="chips">
               <span class="chip">Ollama</span>
               <span class="chip">10G Fibre</span>

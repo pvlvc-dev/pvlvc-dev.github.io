@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Dimitrije Pavlovic — Homelab & Networking</title>
+<title>Dimitrije Pavlovic | Homelab & Networking</title>
 <meta name="description" content="Homelab, networking, and cybersecurity portfolio." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,30 +34,29 @@
     <div class="container hero-inner">
 
       <div class="hero-text">
-        <div class="hero-eyebrow reveal">Networking & Homelab</div>
-        <h1 class="reveal reveal-d1">Homelabber &<br><em>Network Engineer</em></h1>
-        <p class="hero-desc reveal reveal-d2">
-          I design and operate an enterprise-style homelab built on pfSense, Cisco switching,
-          UniFi wireless, and Proxmox, with a focus on security architecture, network segmentation,
-          and self-hosted services.
+        <h1 class="reveal">Homelabber &amp;<br><em>Network Engineer</em></h1>
+        <p class="hero-desc reveal reveal-d1">
+          I run a segmented homelab on pfSense, Cisco switching, UniFi, and Proxmox.
+          Six VLANs, self-hosted services, and an OpenVPN tunnel back in.
+          Built to practice what I study.
         </p>
-        <div class="hero-stats reveal reveal-d3">
+        <div class="hero-stats reveal reveal-d2">
           <div class="hero-stat">
-            <span class="hero-stat-value">3</span>
-            <span class="hero-stat-label">Years Studying</span>
-          </div>
-          <div class="hero-stat">
-            <span class="hero-stat-value">3</span>
-            <span class="hero-stat-label">Ongoing Projects</span>
+            <span class="hero-stat-value">6</span>
+            <span class="hero-stat-label">VLANs</span>
           </div>
           <div class="hero-stat">
             <span class="hero-stat-value">6+</span>
-            <span class="hero-stat-label">Self-hosted Services</span>
+            <span class="hero-stat-label">Self-hosted</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-value">C-2960G</span>
+            <span class="hero-stat-label">Core Switch</span>
           </div>
         </div>
-        <div class="cta reveal reveal-d4">
+        <div class="cta reveal reveal-d3">
           <a class="btn primary" href="projects.html">View Projects</a>
-          <a class="btn ghost" href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="btn ghost" href="https://github.com/pvlvc-dev" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
       </div>
 
@@ -67,51 +66,46 @@
           <span class="t-dot r"></span>
           <span class="t-dot y"></span>
           <span class="t-dot g"></span>
-          <span class="terminal-filename">status.sh — bash</span>
+          <span class="terminal-filename">bash - dimitrije@homelab:~</span>
         </div>
         <div class="terminal-body">
-          <div class="t-section-label">Network Status</div>
 
-          <div class="status-row">
-            <span class="status-label"><span class="s-dot live"></span>pfSense FW</span>
-            <span class="s-badge live">ACTIVE</span>
-          </div>
-          <div class="status-row">
-            <span class="status-label"><span class="s-dot live"></span>Proxmox VE</span>
-            <span class="s-badge live">ACTIVE</span>
-          </div>
-          <div class="status-row">
-            <span class="status-label"><span class="s-dot live"></span>AdGuard DNS</span>
-            <span class="s-badge live">ACTIVE</span>
-          </div>
-          <div class="status-row">
-            <span class="status-label"><span class="s-dot live"></span>OpenVPN</span>
-            <span class="s-badge live">ACTIVE</span>
-          </div>
-          <div class="status-row">
-            <span class="status-label"><span class="s-dot live"></span>UniFi AP</span>
-            <span class="s-badge live">ACTIVE</span>
-          </div>
-          <div class="status-row">
-            <span class="status-label"><span class="s-dot planned"></span>CCNA</span>
-            <span class="s-badge planned">IN PROGRESS</span>
+          <div class="t-prompt-line">
+            <span class="tp-user">dimitrije</span><span class="tp-sep">@homelab</span><span class="tp-colon">:</span><span class="tp-path">~</span><span class="tp-dollar"> $</span>
+            <span class="t-cmd-text"> ./net-status</span>
           </div>
 
-          <hr class="t-divider">
+          <div class="t-out">
+            <div class="t-col-hd">IFACE      ADDRESS           ROLE</div>
+            <div class="t-if-row"><span class="t-ifname">em0</span><span class="t-ifaddr">██.██.██.██</span><span class="t-ifrole">WAN</span><span class="t-ifup">↑</span></div>
+            <div class="t-if-row"><span class="t-ifname">em1</span><span class="t-ifaddr">10.80.100.1/24</span><span class="t-ifrole">LAN</span><span class="t-ifup">↑</span></div>
+            <div class="t-if-row"><span class="t-ifname">em1.50</span><span class="t-ifaddr">10.80.50.1/24</span><span class="t-ifrole">SRV</span><span class="t-ifup">↑</span></div>
+            <div class="t-if-row"><span class="t-ifname">em1.99</span><span class="t-ifaddr">10.80.99.1/24</span><span class="t-ifrole">MGMT</span><span class="t-ifup">↑</span></div>
+            <div class="t-if-row"><span class="t-ifname">tun0</span><span class="t-ifaddr">10.8.0.1/24</span><span class="t-ifrole">VPN</span><span class="t-ifup">↑</span></div>
+          </div>
 
-          <div class="t-section-label">Environment</div>
-          <div class="t-kv-row">
-            <span class="t-key">SERVICES_RUNNING</span>
-            <span class="t-val">6+</span>
+          <div class="t-gap"></div>
+
+          <div class="t-prompt-line">
+            <span class="tp-user">dimitrije</span><span class="tp-sep">@homelab</span><span class="tp-colon">:</span><span class="tp-path">~</span><span class="tp-dollar"> $</span>
+            <span class="t-cmd-text"> systemctl is-active --brief</span>
           </div>
-          <div class="t-kv-row">
-            <span class="t-key">CORE_SWITCH</span>
-            <span class="t-val">C-2960G</span>
+
+          <div class="t-out">
+            <div class="t-svc-row"><span class="t-svc-dot on">●</span><span class="t-svc-name">adguardhome</span><span class="t-svc-stat on">active</span></div>
+            <div class="t-svc-row"><span class="t-svc-dot on">●</span><span class="t-svc-name">seafile</span><span class="t-svc-stat on">active</span></div>
+            <div class="t-svc-row"><span class="t-svc-dot on">●</span><span class="t-svc-name">openvpn@server</span><span class="t-svc-stat on">active</span></div>
+            <div class="t-svc-row"><span class="t-svc-dot on">●</span><span class="t-svc-name">proxmox-ve</span><span class="t-svc-stat on">active</span></div>
+            <div class="t-svc-row"><span class="t-svc-dot on">●</span><span class="t-svc-name">unifi-controller</span><span class="t-svc-stat on">active</span></div>
           </div>
-          <div class="t-kv-row">
-            <span class="t-key">HYPERVISOR</span>
-            <span class="t-val">Proxmox VE<span class="terminal-cursor"></span></span>
+
+          <div class="t-gap"></div>
+
+          <div class="t-prompt-line">
+            <span class="tp-user">dimitrije</span><span class="tp-sep">@homelab</span><span class="tp-colon">:</span><span class="tp-path">~</span><span class="tp-dollar"> $</span>
+            <span class="terminal-cursor"></span>
           </div>
+
         </div>
       </div>
 
@@ -124,11 +118,10 @@
 
       <div class="about-text reveal">
         <div class="section-label">About</div>
-        <h2 class="section-title">Problem solver.<br>Network tinkerer.</h2>
+        <h2 class="section-title">Networking student.<br>Homelab operator.</h2>
         <p>
-          I'm a 3rd-year Networking & Cybersecurity student with a hands-on focus. Every concept
-          I study gets applied in my homelab before I consider it learned. I care about building systems
-          that are both functional, well-documented and provide real world services.
+          I'm a 3rd-year Networking & Cybersecurity student. Every concept
+          I study gets applied in my homelab before I consider it learned.
         </p>
         <p>
           My current focus is on expanding monitoring coverage, automating repetitive configuration work,
@@ -143,14 +136,14 @@
       <div class="reveal reveal-d2">
         <div class="section-label" style="margin-bottom:16px;">Tech Stack</div>
         <div class="skill-grid">
-          <div class="skill-item"><div class="skill-icon">🔒</div><span class="skill-name">pfSense</span></div>
-          <div class="skill-item"><div class="skill-icon">🔀</div><span class="skill-name">Cisco IOS</span></div>
-          <div class="skill-item"><div class="skill-icon">📡</div><span class="skill-name">UniFi</span></div>
-          <div class="skill-item"><div class="skill-icon">🖥️</div><span class="skill-name">Proxmox VE</span></div>
-          <div class="skill-item"><div class="skill-icon">🛡️</div><span class="skill-name">AdGuard</span></div>
-          <div class="skill-item"><div class="skill-icon">🐍</div><span class="skill-name">Python</span></div>
-          <div class="skill-item"><div class="skill-icon">🔐</div><span class="skill-name">OpenVPN</span></div>
-          <div class="skill-item"><div class="skill-icon">🐧</div><span class="skill-name">Linux</span></div>
+          <div class="skill-item"><div class="skill-icon"><img src="https://cdn.simpleicons.org/pfsense/a5b4fc" alt="pfSense" /></div><span class="skill-name">pfSense</span></div>
+          <div class="skill-item"><div class="skill-icon"><img src="https://cdn.simpleicons.org/cisco/a5b4fc" alt="Cisco" /></div><span class="skill-name">Cisco IOS</span></div>
+          <div class="skill-item"><div class="skill-icon"><img src="https://cdn.simpleicons.org/ubiquiti/a5b4fc" alt="UniFi" /></div><span class="skill-name">UniFi</span></div>
+          <div class="skill-item"><div class="skill-icon"><img src="https://cdn.simpleicons.org/proxmox/a5b4fc" alt="Proxmox" /></div><span class="skill-name">Proxmox VE</span></div>
+          <div class="skill-item"><div class="skill-icon"><img src="https://cdn.simpleicons.org/adguard/a5b4fc" alt="AdGuard" /></div><span class="skill-name">AdGuard</span></div>
+          <div class="skill-item"><div class="skill-icon"><img src="https://cdn.simpleicons.org/python/a5b4fc" alt="Python" /></div><span class="skill-name">Python</span></div>
+          <div class="skill-item"><div class="skill-icon"><img src="https://cdn.simpleicons.org/openvpn/a5b4fc" alt="OpenVPN" /></div><span class="skill-name">OpenVPN</span></div>
+          <div class="skill-item"><div class="skill-icon"><img src="https://cdn.simpleicons.org/linux/a5b4fc" alt="Linux" /></div><span class="skill-name">Linux</span></div>
         </div>
       </div>
 
