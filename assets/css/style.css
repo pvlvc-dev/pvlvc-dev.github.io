@@ -236,7 +236,7 @@ body::after {
   background: rgba(9,12,22,0.95);
   border: 1px solid var(--border-hi);
   border-radius: var(--radius);
-  overflow: hidden;
+  overflow: clip;
   box-shadow: 0 0 0 1px rgba(79,70,229,0.08), var(--shadow);
 }
 .terminal-titlebar {
@@ -260,7 +260,7 @@ body::after {
   color: var(--muted);
   margin-left: 6px;
 }
-.terminal-body { padding: 18px 20px 20px; }
+.terminal-body { padding: 18px 20px 20px; overflow-x: auto; }
 .terminal-cursor {
   display: inline-block;
   width: 6px; height: 13px;
@@ -511,7 +511,6 @@ body::after {
   align-items: center;
   justify-content: space-between;
   padding: 22px 0;
-  flex-wrap: wrap;
   gap: 12px;
 }
 .footer-copy {
@@ -589,6 +588,7 @@ body::after {
   .section      { padding: 48px 0; }
   .grid-2       { gap: 36px; }
   .page-hero    { padding: 36px 0 16px; margin-bottom: 28px; }
+  .footer-inner { gap: 8px; }
 }
 @media (max-width: 400px) {
   .terminal-body  { padding: 14px 14px 16px; }
